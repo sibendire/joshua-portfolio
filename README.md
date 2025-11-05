@@ -1,73 +1,52 @@
-# React + TypeScript + Vite
+# 🌐 Sibendire Joshua — Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my professional portfolio website showcasing my projects, skills, and experience as a **Full Stack Software Engineer** specializing in **Java (Spring Boot)** and **React**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
+🔗 [https://sibendire.netlify.app](https://sibendire.netlify.app)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🧰 Tech Stack
+- **Frontend:** React, TypeScript, Bootstrap 5, Vite  
+- **Backend Expertise:** Java, Spring Boot, Hibernate, Spring Security, MySQL  
+- **Tools:** Docker, Git, Maven, Launch4j, Postman  
+- **Deployment:** Netlify  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 💼 Highlighted Projects
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 🎓 School Management System
+A full-featured Spring Boot + Thymeleaf application for managing:
+- Student admissions and academic records  
+- Fee payments and receipt generation  
+- PDF report cards and license validation  
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+> Designed for real-world schools with offline licensing and secure data management.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 📚 Bookshop Management App
+Desktop-style Java Spring Boot application featuring:
+- License activation and renewal system  
+- PDF invoice generation  
+- Launch4j installer for standalone deployment  
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+> Created for small businesses that need offline desktop solutions.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 📫 Contact
+
+📧 **sibendirejoshua@gmail.com**  
+🔗 [LinkedIn](https://www.linkedin.com/in/sibendire-joshua-5b0850262/)  
+💻 [GitHub](https://github.com/sibendire)
+
+---
+
+## 🧠 About Me
+I’m a **results-oriented Software Engineer** passionate about building robust, maintainable, and scalable systems.  
+My experience spans **backend API design**, **enterprise software**, and **frontend engineering** — delivering complete end-to-end solutions for real-world clients.
