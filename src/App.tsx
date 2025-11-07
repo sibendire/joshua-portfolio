@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
@@ -10,61 +10,85 @@ const App = () => {
       {/* NAVBAR */}
       <Navbar />
 
-      {/* HERO SECTION */}
-      <section
-        id="hero"
-        className="text-center text-white d-flex align-items-center justify-content-center"
-        style={{
-          minHeight: "70vh",
-          backgroundImage: "url('/screenshots/port.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          paddingTop: "70px",
-        }}
-      >
-        <div
-          className="container py-5 px-4"
+     {/* HERO SECTION */}
+<section
+  id="hero"
+  className="d-flex align-items-center justify-content-center text-white"
+  style={{
+    minHeight: "80vh",
+    backgroundImage: "url('/screenshots/port.jpg')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    paddingTop: "70px",
+  }}
+>
+  <div
+    className="container py-5 px-4"
+    style={{
+      borderRadius: "16px",
+     // backgroundColor: "rgba(0, 0, 0, 0.6)",
+      maxWidth: "1000px",
+    }}
+  >
+    <div className="row align-items-center">
+      {/* LEFT — PROFILE PHOTO */}
+      <div className="col-md-5 text-center mb-4 mb-md-0">
+        <img
+          src="/screenshots/joshua.jpg"
+          alt="Sibendire Joshua"
+          className="rounded-circle shadow-lg"
           style={{
-            borderRadius: "16px",
-            maxWidth: "800px",
+            width: "200px",
+            height: "200px",
+            objectFit: "cover",
+            border: "5px solid white",
           }}
-        >
-          <h1 className="display-4 fw-bold mb-3">Sibendire Joshua</h1>
-          <p className="fs-4 mb-3">Full Stack Software Engineer</p>
-          <p className="mb-4">
-            I’m a results-driven developer specializing in{" "}
-            <strong>Java (Spring Boot)</strong> and <strong>React</strong>,
-            passionate about designing secure, scalable, and maintainable
-            enterprise software.
-          </p>
-          <div className="d-flex justify-content-center gap-3 flex-wrap">
-            <a
-              href="https://github.com/sibendire"
-              target="_blank"
-              rel="noreferrer"
-              className="btn btn-light fw-semibold text-primary px-4 py-2"
-            >
-              <i className="bi bi-github me-2"></i>GitHub
-            </a>
-            <a
-              href="https://www.linkedin.com/in/sibendire-joshua-5b0850262/"
-              target="_blank"
-              rel="noreferrer"
-              className="btn btn-outline-light fw-semibold px-4 py-2"
-            >
-              <i className="bi bi-linkedin me-2"></i>LinkedIn
-            </a>
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noreferrer"
-              className="btn btn-light fw-semibold text-primary px-4 py-2"
-            >
-              <i className="bi bi-file-earmark-text me-2"></i>Resume
-            </a>
-          </div>
+        />
+      </div>
+
+      {/* RIGHT — TEXT CONTENT */}
+      <div className="col-md-7 text-md-start text-center text-light">
+        <h1 className="display-4 fw-bold mb-3">Sibendire Joshua</h1>
+        <h4 className="fw-semibold text-info mb-3">
+          Full Stack Software Engineer
+        </h4>
+        <p className="mb-4 fs-5">
+          I’m a results-driven developer specializing in{" "}
+          <strong>Java (Spring Boot)</strong> and <strong>React</strong>,
+          passionate about designing secure, scalable, and maintainable enterprise software.
+        </p>
+
+        {/* BUTTONS */}
+        <div className="d-flex flex-wrap gap-3 justify-content-md-start justify-content-center">
+          <a
+            href="https://github.com/sibendire"
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn-light fw-semibold text-primary px-4 py-2"
+          >
+            <i className="bi bi-github me-2"></i>GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/sibendire-joshua-5b0850262/"
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn-outline-light fw-semibold px-4 py-2"
+          >
+            <i className="bi bi-linkedin me-2"></i>LinkedIn
+          </a>
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn-light fw-semibold text-primary px-4 py-2"
+          >
+            <i className="bi bi-file-earmark-text me-2"></i>Resume
+          </a>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* TECH STACK */}
       <section id="tech" className="py-5 text-center container">
@@ -161,30 +185,6 @@ const App = () => {
           </div>
         </div>
       </section>
-
-     {/* // RESUME SECTION
-      <section id="resume" className="py-5 bg-white">
-        <div className="container text-center">
-          <h2 className="fw-bold text-primary mb-4">My Resume</h2>
-          <iframe
-            src="/resume.pdf"
-            width="100%"
-            height="600px"
-            style={{ border: "1px solid #ccc", borderRadius: "8px" }}
-            title="Sibendire Joshua Resume"
-          ></iframe>
-          <div className="mt-3">
-            <a
-              href="/resume.pdf"
-              download
-              className="btn btn-primary fw-semibold"
-            >
-              <i className="bi bi-download me-1"></i> Download Resume
-            </a>
-          </div>
-        </div>
-      </section> */}
-
       {/* CONTACT */}
       <section
         id="contact"

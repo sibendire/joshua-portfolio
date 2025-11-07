@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <nav
       className={`navbar navbar-expand-lg fixed-top shadow-sm transition ${
-        scrolled ? "bg-primary" : "bg-transparent"
+        scrolled ? "bg-primary" : "bg-black"
       }`}
     >
       <div className="container">
