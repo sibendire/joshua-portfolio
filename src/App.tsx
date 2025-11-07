@@ -7,13 +7,26 @@ const App = () => {
   return (
     <div className="bg-light text-dark min-vh-100">
       {/* HERO SECTION */}
-      <section className="text-center text-white py-5" style={{ background: "linear-gradient(135deg, #1e3a8a, #4338ca)" }}>
-        <div className="container">
+      <section
+        className="text-center text-white py-5"
+        style={{
+          backgroundImage: "url('/screenshots/port.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div
+          className="container py-5"
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.6)", borderRadius: "12px" }}
+        >
           <h1 className="display-4 fw-bold mb-3">Sibendire Joshua</h1>
           <p className="fs-4 mb-3">Full Stack Software Engineer</p>
           <p className="mx-auto w-75">
-            I’m a results-driven developer specializing in <strong>Java (Spring Boot)</strong> and <strong>React</strong>,
-            passionate about designing secure, scalable, and maintainable enterprise software.
+            I’m a results-driven developer specializing in{" "}
+            <strong>Java (Spring Boot)</strong> and <strong>React</strong>,
+            passionate about designing secure, scalable, and maintainable
+            enterprise software.
           </p>
           <div className="d-flex justify-content-center gap-3 mt-4">
             <a
@@ -64,7 +77,8 @@ const App = () => {
               <div className="card-body">
                 <h5 className="card-title fw-semibold">Backend</h5>
                 <p className="card-text">
-                  Java, Spring Boot, Hibernate, Spring Security, RESTful APIs, MySQL
+                  Java, Spring Boot, Hibernate, Spring Security, RESTful APIs,
+                  MySQL
                 </p>
               </div>
             </div>
@@ -75,7 +89,8 @@ const App = () => {
               <div className="card-body">
                 <h5 className="card-title fw-semibold">DevOps & Tools</h5>
                 <p className="card-text">
-                  Git, Docker, Maven, Launch4j, Postman, PDF Export, License Systems
+                  Git, Docker, Maven, Launch4j, Postman, PDF Export, License
+                  Systems
                 </p>
               </div>
             </div>
@@ -84,72 +99,93 @@ const App = () => {
       </section>
 
       {/* PROJECTS SECTION */}
-<section className="py-5 bg-light">
-  <div className="container">
-    <h2 className="fw-bold text-primary text-center mb-5">Highlighted Projects</h2>
-    <div className="row g-4">
-      {/* School Management System */}
-      <div className="col-md-6">
-        <div className="card h-100 shadow-sm border-0">
-          <img
-            src="/screenshots/school-management-system.png"
-            className="card-img-top"
-            alt="School Management System"
-            style={{ borderBottom: "3px solid #0d6efd", objectFit: "cover", height: "250px" }}
-          />
-          <div className="card-body">
-            <h4 className="card-title mb-3">🎓 School Management System</h4>
-            <p className="card-text text-secondary">
-              A full-stack Spring Boot + Thymeleaf system for managing student admissions, fees, report cards, and offline licenses.
-            </p>
-            <a
-              href="https://github.com/sibendire"
-              target="_blank"
-              rel="noreferrer"
-              className="fw-semibold text-primary text-decoration-none"
-            >
-              <i className="bi bi-box-arrow-up-right me-1"></i> View on GitHub
-            </a>
+      <section className="py-5 bg-light">
+        <div className="container">
+          <h2 className="fw-bold text-primary text-center mb-5">
+            Highlighted Projects
+          </h2>
+          <div className="row g-4">
+            {/* School Management System */}
+            <div className="col-md-6">
+              <div className="card h-100 shadow-sm border-0">
+                <img
+                  src="/screenshots/port.jpg"
+                  className="card-img-top"
+                  alt="School Management System"
+                  style={{
+                    borderBottom: "3px solid #0d6efd",
+                    objectFit: "cover",
+                    height: "250px",
+                  }}
+                />
+                <div className="card-body">
+                  <h4 className="card-title mb-3">
+                    🎓 School Management System
+                  </h4>
+                  <p className="card-text text-secondary">
+                    A full-stack Spring Boot + Thymeleaf system for managing
+                    student admissions, fees, report cards, and offline licenses.
+                  </p>
+                  <a
+                    href="https://github.com/sibendire"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="fw-semibold text-primary text-decoration-none"
+                  >
+                    <i className="bi bi-box-arrow-up-right me-1"></i> View on
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Bookshop Management App */}
+            <div className="col-md-6">
+              <div className="card h-100 shadow-sm border-0">
+                <img
+                  src="/screenshots/images.jpeg"
+                  className="card-img-top"
+                  alt="Bookshop Management App"
+                  style={{
+                    borderBottom: "3px solid #0d6efd",
+                    objectFit: "cover",
+                    height: "250px",
+                  }}
+                />
+                <div className="card-body">
+                  <h4 className="card-title mb-3">
+                    📚 Bookshop Management App
+                  </h4>
+                  <p className="card-text text-secondary">
+                    A desktop-style Spring Boot app with license activation, PDF
+                    invoicing, and a Windows installer via Launch4j.
+                  </p>
+                  <a
+                    href="https://github.com/sibendire"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="fw-semibold text-primary text-decoration-none"
+                  >
+                    <i className="bi bi-box-arrow-up-right me-1"></i> View on
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
-      {/* Bookshop Management App */}
-      <div className="col-md-6">
-        <div className="card h-100 shadow-sm border-0">
-          <img
-            src="/screenshots/bookshop-app.png"
-            className="card-img-top"
-            alt="Bookshop Management App"
-            style={{ borderBottom: "3px solid #0d6efd", objectFit: "cover", height: "250px" }}
-          />
-          <div className="card-body">
-            <h4 className="card-title mb-3">📚 Bookshop Management App</h4>
-            <p className="card-text text-secondary">
-              A desktop-style Spring Boot app with license activation, PDF invoicing, and a Windows installer via Launch4j.
-            </p>
-            <a
-              href="https://github.com/sibendire"
-              target="_blank"
-              rel="noreferrer"
-              className="fw-semibold text-primary text-decoration-none"
-            >
-              <i className="bi bi-box-arrow-up-right me-1"></i> View on GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+      </section>
 
       {/* CONTACT */}
-      <section className="py-5 text-center text-white" style={{ backgroundColor: "#1e3a8a" }}>
+      <section
+        className="py-5 text-center text-white"
+        style={{ backgroundColor: "#1e3a8a" }}
+      >
         <div className="container">
           <h2 className="fw-bold mb-3">Let’s Work Together</h2>
           <p className="mb-4">
-            Have a project, idea, or opportunity in mind? I’m open to freelance, contract, and full-time roles.
+            Have a project, idea, or opportunity in mind? I’m open to freelance,
+            contract, and full-time roles.
           </p>
           <a
             href="mailto:sibendirejoshua@gmail.com"
