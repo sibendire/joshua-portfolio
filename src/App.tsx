@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
 import Navbar from "./components/Navbar.jsx";
-
 
 const App = () => {
   return (
@@ -26,7 +25,6 @@ const App = () => {
         <div
           className="container py-5 px-4"
           style={{
-            //backgroundColor: "rgba(0,0,0,0.6)",
             borderRadius: "16px",
             maxWidth: "800px",
           }}
@@ -67,6 +65,7 @@ const App = () => {
           </div>
         </div>
       </section>
+
       {/* TECH STACK */}
       <section id="tech" className="py-5 text-center container">
         <h2 className="fw-bold text-primary mb-5">Core Technologies</h2>
@@ -98,72 +97,93 @@ const App = () => {
       </section>
 
       {/* PROJECTS */}
-<section id="projects" className="py-5 bg-light">
-  <div className="container">
-    <h2 className="fw-bold text-primary text-center mb-5">
-      Highlighted Projects
-    </h2>
-    <div className="row g-4">
-      {[
-        {
-          title: "🎓 School Management System",
-          image: "/screenshots/port.jpg",
-          description:
-            "A full-stack Spring Boot + Thymeleaf system for managing student admissions, fees, report cards, and offline licenses.",
-          github: "https://github.com/sibendire",
-          demo: "https://your-live-demo-link.com", // replace with actual live demo if available
-        },
-        {
-          title: "📚 Bookshop Management App",
-          image: "/screenshots/images.jpeg",
-          description:
-            "A desktop-style Spring Boot app with license activation, PDF invoicing, and a Windows installer via Launch4j.",
-          github: "https://github.com/sibendire",
-          demo: "https://your-live-demo-link.com", // replace with actual live demo if available
-        },
-      ].map((project, idx) => (
-        <div className="col-md-6" key={idx}>
-          <div className="card h-100 shadow-sm border-0 project-card">
-            <img
-              src={project.image}
-              className="card-img-top"
-              alt={project.title}
-              style={{
-                borderBottom: "3px solid #0d6efd",
-                objectFit: "cover",
-                height: "250px",
-              }}
-            />
-            <div className="card-body d-flex flex-column">
-              <h4 className="card-title mb-3">{project.title}</h4>
-              <p className="card-text text-secondary flex-grow-1">{project.description}</p>
-              
-              {/* Buttons */}
-              <div className="d-flex gap-2 mt-3">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn btn-outline-primary fw-semibold flex-grow-1"
-                >
-                  <i className="bi bi-github me-1"></i> GitHub
-                </a>
-                <a
-                  href={project.demo || project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn btn-primary fw-semibold flex-grow-1"
-                >
-                  <i className="bi bi-display me-1"></i> Live Demo
-                </a>
+      <section id="projects" className="py-5 bg-light">
+        <div className="container">
+          <h2 className="fw-bold text-primary text-center mb-5">
+            Highlighted Projects
+          </h2>
+          <div className="row g-4">
+            {[
+              {
+                title: "🎓 School Management System",
+                image: "/screenshots/port.jpg",
+                description:
+                  "A full-stack Spring Boot + Thymeleaf system for managing student admissions, fees, report cards, and offline licenses.",
+                github: "https://github.com/sibendire",
+                demo: "https://your-live-demo-link.com",
+              },
+              {
+                title: "📚 Bookshop Management App",
+                image: "/screenshots/images.jpeg",
+                description:
+                  "A desktop-style Spring Boot app with license activation, PDF invoicing, and a Windows installer via Launch4j.",
+                github: "https://github.com/sibendire",
+                demo: "https://your-live-demo-link.com",
+              },
+            ].map((project, idx) => (
+              <div className="col-md-6" key={idx}>
+                <div className="card h-100 shadow-sm border-0 project-card">
+                  <img
+                    src={project.image}
+                    className="card-img-top"
+                    alt={project.title}
+                    style={{
+                      borderBottom: "3px solid #0d6efd",
+                      objectFit: "cover",
+                      height: "250px",
+                    }}
+                  />
+                  <div className="card-body d-flex flex-column">
+                    <h4 className="card-title mb-3">{project.title}</h4>
+                    <p className="card-text text-secondary flex-grow-1">{project.description}</p>
+                    <div className="d-flex gap-2 mt-3">
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="btn btn-outline-primary fw-semibold flex-grow-1"
+                      >
+                        <i className="bi bi-github me-1"></i> GitHub
+                      </a>
+                      <a
+                        href={project.demo || project.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="btn btn-primary fw-semibold flex-grow-1"
+                      >
+                        <i className="bi bi-display me-1"></i> Live Demo
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
+
+     {/* // RESUME SECTION
+      <section id="resume" className="py-5 bg-white">
+        <div className="container text-center">
+          <h2 className="fw-bold text-primary mb-4">My Resume</h2>
+          <iframe
+            src="/resume.pdf"
+            width="100%"
+            height="600px"
+            style={{ border: "1px solid #ccc", borderRadius: "8px" }}
+            title="Sibendire Joshua Resume"
+          ></iframe>
+          <div className="mt-3">
+            <a
+              href="/resume.pdf"
+              download
+              className="btn btn-primary fw-semibold"
+            >
+              <i className="bi bi-download me-1"></i> Download Resume
+            </a>
+          </div>
+        </div>
+      </section> */}
 
       {/* CONTACT */}
       <section
