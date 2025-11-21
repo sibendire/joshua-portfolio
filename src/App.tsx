@@ -2,8 +2,89 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./App.css";
 import Navbar from "./components/Navbar.jsx";
+import { useState } from "react";
 
 const App = () => {
+  // Toggle for projects
+  const [showMore, setShowMore] = useState(false);
+
+  // All projects (6)
+  const allProjects = [
+    {
+      title: "🎓 School Management System",
+      image: "/screenshots/port.jpg",
+      description:
+        "A full-stack enterprise solution built with Spring Boot and Thymeleaf for managing student admissions, fees, report cards, and offline licensing. Designed for real-world deployment with role-based security and PDF exports.",
+      github: "https://github.com/sibendire",
+      demo: "#",
+    },
+    {
+      title: "📚 Bookshop Management Application",
+      image: "/screenshots/images.jpeg",
+      description:
+        "A modern Spring Boot desktop-style system featuring license activation, PDF invoicing, and a Windows installer (Launch4j). Built for performance, scalability, and offline functionality.",
+      github: "https://github.com/sibendire",
+      demo: "#",
+    },
+    {
+      title: "🛒 E-Commerce Platform",
+      image: "/screenshots/ecom.jpeg",
+      description:
+        "A modern e-commerce solution with cart, orders, and admin dashboards (React + Spring Boot).",
+      github: "https://github.com/sibendire",
+      demo: "#",
+    },
+    {
+      title: "📡 Blogging Platform API",
+      image: "/screenshots/news.jpeg",
+      description:
+        "REST API blogging system built in Spring Boot with JWT security, comments, and categories.",
+      github: "https://github.com/sibendire",
+      demo: "#",
+    },
+    {
+      title: "📝 Task Manager App",
+      image: "/screenshots/task.jpeg",
+      description:
+        "React task manager with authentication, reminders, priority tags, and drag-and-drop tasks.",
+      github: "https://github.com/sibendire",
+      demo: "#",
+    },
+    {
+      title: "🏥 Clinic Management System",
+      image: "/screenshots/heal.jpg",
+      description:
+        "Healthcare management system supporting patient records, prescriptions, billing, and appointments.",
+      github: "https://github.com/sibendire",
+      demo: "#",
+    },
+  ];
+
+  // Projects to render
+  const displayedProjects = showMore ? allProjects : allProjects.slice(0, 3);
+
+  // Tech cards (same info you had)
+  const techs = [
+    {
+      icon: "bi bi-laptop",
+      title: "Frontend Development",
+      text: "React, TypeScript, JavaScript (ES6+), HTML5, CSS3, Bootstrap, Vite",
+      bg: "linear-gradient(135deg, #e3f2fd, #ffffff)",
+    },
+    {
+      icon: "bi bi-server",
+      title: "Backend Development",
+      text: "Java, Spring Boot, Hibernate, Spring Security, REST APIs, MySQL",
+      bg: "linear-gradient(135deg, #ede7f6, #ffffff)",
+    },
+    {
+      icon: "bi bi-gear-wide-connected",
+      title: "DevOps & Tools",
+      text: "Git, Docker, Maven, Launch4j, Postman, PDF Export, License Systems",
+      bg: "linear-gradient(135deg, #e8f5e9, #ffffff)",
+    },
+  ];
+
   return (
     <div className="bg-light text-dark min-vh-100">
       {/* NAVBAR */}
@@ -123,26 +204,7 @@ const App = () => {
           </p>
 
           <div className="row g-4">
-            {[
-              {
-                icon: "bi bi-laptop",
-                title: "Frontend Development",
-                text: "React, TypeScript, JavaScript (ES6+), HTML5, CSS3, Bootstrap, Vite",
-                bg: "linear-gradient(135deg, #e3f2fd, #ffffff)",
-              },
-              {
-                icon: "bi bi-server",
-                title: "Backend Development",
-                text: "Java, Spring Boot, Hibernate, Spring Security, REST APIs, MySQL",
-                bg: "linear-gradient(135deg, #ede7f6, #ffffff)",
-              },
-              {
-                icon: "bi bi-gear-wide-connected",
-                title: "DevOps & Tools",
-                text: "Git, Docker, Maven, Launch4j, Postman, PDF Export, License Systems",
-                bg: "linear-gradient(135deg, #e8f5e9, #ffffff)",
-              },
-            ].map((tech, idx) => (
+            {techs.map((tech, idx) => (
               <div className="col-md-4" key={idx}>
                 <div
                   className="card h-100 shadow-sm border-0"
@@ -198,109 +260,18 @@ const App = () => {
           </h2>
 
           <div className="row g-4">
-            {[
-              {
-                title: "🎓 School Management System",
-                image: "/screenshots/port.jpg",
-                description:
-                  "A full-stack enterprise solution built with Spring Boot and Thymeleaf for managing student admissions, fees, report cards, and offline licensing. Designed for real-world deployment with role-based security and PDF exports.",
-                github: "https://github.com/sibendire",
-                demo: "#",
-              },
-              {
-                title: "📚 Bookshop Management Application",
-                image: "/screenshots/images.jpeg",
-                description:
-                  "A modern Spring Boot desktop-style system featuring license activation, PDF invoicing, and a Windows installer (Launch4j). Built for performance, scalability, and offline functionality.",
-                github: "https://github.com/sibendire",
-                demo: "#",
-              },
-            ].map((project, idx) => (
-              <div className="col-md-6" key={idx}>
-                <div
-                  className="card h-100 border-0 shadow-sm project-card position-relative overflow-hidden"
-                  style={{
-                    borderRadius: "20px",
-                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateY(-8px)";
-                    e.currentTarget.style.boxShadow =
-                      "0 12px 25px rgba(0, 0, 0, 0.15)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow =
-                      "0 5px 15px rgba(0, 0, 0, 0.1)";
-                  }}
-                >
-                  <div className="position-relative">
-                    <img
-                      src={project.image}
-                      className="card-img-top"
-                      alt={project.title}
-                      style={{
-                        height: "250px",
-                        objectFit: "cover",
-                        borderTopLeftRadius: "20px",
-                        borderTopRightRadius: "20px",
-                      }}
-                    />
-                    <div
-                      className="position-absolute top-0 start-0 w-100 h-100"
-                      style={{
-                        background:
-                          "linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0))",
-                      }}
-                    ></div>
-                  </div>
-
-                  <div className="card-body d-flex flex-column p-4">
-                    <h4
-                      className="fw-bold mb-3"
-                      style={{
-                        color: "#0d1b2a",
-                        fontSize: "1.4rem",
-                      }}
-                    >
-                      {project.title}
-                    </h4>
-                    <p className="text-secondary flex-grow-1">
-                      {project.description}
-                    </p>
-
-                    <div className="d-flex gap-2 mt-3">
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="btn btn-outline-primary fw-semibold flex-grow-1"
-                        style={{
-                          borderRadius: "50px",
-                          transition: "all 0.3s ease",
-                        }}
-                      >
-                        <i className="bi bi-github me-1"></i> GitHub
-                      </a>
-                      <a
-                        href={project.demo || project.github}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="btn btn-primary fw-semibold flex-grow-1"
-                        style={{
-                          borderRadius: "50px",
-                          background:
-                            "linear-gradient(90deg, #1e3a8a, #2563eb)",
-                          border: "none",
-                        }}
-                      >
-                        <i className="bi bi-display me-1"></i> Live Demo
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            {displayedProjects.map((project, idx) => (
+              <ProjectCard key={idx} project={project} />
             ))}
+          </div>
+
+          <div className="text-center mt-4">
+            <button
+              className="btn btn-outline-primary px-4 py-2"
+              onClick={() => setShowMore(!showMore)}
+            >
+              {showMore ? "Show Less" : "More Projects"}
+            </button>
           </div>
         </div>
       </section>
@@ -335,5 +306,79 @@ const App = () => {
     </div>
   );
 };
+
+// Reusable ProjectCard component
+const ProjectCard = ({ project }) => (
+  <div className="col-md-6 col-lg-4">
+    <div
+      className="card h-100 border-0 shadow-sm project-card position-relative overflow-hidden"
+      style={{
+        borderRadius: "20px",
+        transition: "transform 0.3s ease, box-shadow 0.3s ease",
+      }}
+    >
+      <div className="position-relative">
+        <img
+          src={project.image}
+          className="card-img-top"
+          alt={project.title}
+          style={{
+            height: "250px",
+            objectFit: "cover",
+            borderTopLeftRadius: "20px",
+            borderTopRightRadius: "20px",
+          }}
+        />
+        <div
+          className="position-absolute top-0 start-0 w-100 h-100"
+          style={{
+            background:
+              "linear-gradient(to top, rgba(0,0,0,0.1), rgba(0,0,0,0))",
+          }}
+        ></div>
+      </div>
+
+      <div className="card-body d-flex flex-column p-4">
+        <h4
+          className="fw-bold mb-3"
+          style={{
+            color: "#0d1b2a",
+            fontSize: "1.2rem",
+          }}
+        >
+          {project.title}
+        </h4>
+        <p className="text-secondary flex-grow-1">{project.description}</p>
+
+        <div className="d-flex gap-2 mt-3">
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn-outline-primary fw-semibold flex-grow-1"
+            style={{
+              borderRadius: "50px",
+            }}
+          >
+            <i className="bi bi-github me-1"></i> GitHub
+          </a>
+          <a
+            href={project.demo || project.github}
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn-primary fw-semibold flex-grow-1"
+            style={{
+              borderRadius: "50px",
+              background: "linear-gradient(90deg, #1e3a8a, #2563eb)",
+              border: "none",
+            }}
+          >
+            <i className="bi bi-display me-1"></i> Live Demo
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+);
 
 export default App;
