@@ -16,6 +16,10 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
+    /* Allow JS files + disable strict prop typing errors */
+    "allowJs": true,
+    "noImplicitAny": false,
+
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
