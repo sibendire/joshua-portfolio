@@ -5,7 +5,9 @@ This is my professional portfolio website showcasing my projects, skills, and ex
 ---
 
 ## 🚀 Live Demo
-🔗 [(https://joshua-portfolio-2.onrender.com)]((https://joshua-portfolio-2.onrender.com))
+
+[🚀 Live Demo](https://joshua-portfolio-2.onrender.com)
+
 
 ---
 
