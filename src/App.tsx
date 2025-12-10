@@ -12,7 +12,7 @@ const App = () => {
   const allProjects = [
     {
       title: "🎓 School Management System",
-      image: "/screenshots/port.jpg",
+      image: "/screenshots/school.png",
       description:
         "A full-stack enterprise solution built with Spring Boot and Thymeleaf for managing student admissions, fees, report cards, and offline licensing. Designed for real-world deployment with role-based security and PDF exports.",
       github: "https://github.com/sibendire",
