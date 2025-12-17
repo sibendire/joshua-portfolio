@@ -1,9 +1,11 @@
-// src/components/Navbar.js
-import React, { useEffect, useState } from "react";
+// src/components/Navbar.jsx
+import React, { useEffect, useState, useRef } from "react";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const navbarRef = useRef(null);
 
+  // Change background on scroll
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -12,27 +14,37 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Smooth scroll + close mobile menu
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
+
+      // Close navbar on mobile after click
+      if (navbarRef.current?.classList.contains("show")) {
+        navbarRef.current.classList.remove("show");
+      }
     }
   };
 
   return (
     <nav
-      className={`navbar navbar-expand-lg fixed-top shadow-sm transition ${
+      className={`navbar navbar-expand-md navbar-dark fixed-top shadow-sm ${
         scrolled ? "bg-primary" : "bg-black"
       }`}
+      style={{ transition: "background-color 0.3s ease" }}
     >
       <div className="container">
-        <a
+        {/* BRAND */}
+        <span
           className="navbar-brand fw-bold text-white"
-          onClick={() => scrollToSection("hero")}
           style={{ cursor: "pointer" }}
+          onClick={() => scrollToSection("hero")}
         >
-         
-        </a>
+          Software Engineer
+        </span>
+
+        {/* HAMBURGER */}
         <button
           className="navbar-toggler"
           type="button"
@@ -44,17 +56,19 @@ const Navbar = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
+
+        {/* LINKS */}
+        <div className="collapse navbar-collapse" id="navbarNav" ref={navbarRef}>
+          <ul className="navbar-nav ms-auto text-center">
             {["hero", "tech", "projects", "contact"].map((section) => (
               <li className="nav-item" key={section}>
-                <a
-                  className="nav-link text-white fw-semibold mx-2"
+                <span
+                  className="nav-link text-white fw-semibold px-3"
+                  style={{ cursor: "pointer" }}
                   onClick={() => scrollToSection(section)}
-                  style={{ cursor: "pointer", transition: "0.3s" }}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
-                </a>
+                </span>
               </li>
             ))}
           </ul>
