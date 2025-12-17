@@ -5,7 +5,9 @@ This is my professional portfolio website showcasing my projects, skills, and ex
 ---
 
 ## 🚀 Live Demo
-🔗 [https://sibendire.netlify.app](https://sibendire.netlify.app)
+
+[🚀 Live Demo](https://joshua-portfolio-2.onrender.com)
+
 
 ---
 
