@@ -40,7 +40,7 @@ const App = () => {
       description:
         "REST API blogging system built in Spring Boot with JWT security, comments, and categories.",
       github: "https://github.com/sibendire",
-      demo: "#",
+      demo: "https://blog-frontend-kv4q.onrender.com/",
     },
     {
       title: "📝 Task Manager App",
